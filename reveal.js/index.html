@@ -57,7 +57,7 @@
 							<ul style="font-size: 16px;">
 								<li>Create react app</li>
 								<li>Setup Kung-Fui locally</li>
-								<li>Build a React App with our existing components</li>
+								<li>Build a React App with existing components</li>
 							</ul>
 						</div>
 					</div>
@@ -156,18 +156,103 @@
 					<img src="/images/anatomy.jpg" alt="">
 				</section>
 				<section>
-					<h5>The anatomy of a ui component</h5>
+					<h5>Ingredients for our delicious ui component</h5>
 					<ul style="font-size: 32px;">
 						<li>
-							React
+							<a style="font-size:16px;" target="_blank" href="https://github.com/elsevierPTG/rt-fca-ui-components/blob/master/src/components/Button/Button.tsx">React + Typescript</a>
 						</li>
 						<li>
-							Typescript
+							<a style="font-size:16px;" target="_blank" href="https://github.com/elsevierPTG/rt-fca-ui-components/blob/master/src/components/Button/Button.scss">Styling with tailwind</a>
 						</li>
 						<li>
-							Tailwind
+							<a style="font-size:16px;" target="_blank" href="https://github.com/elsevierPTG/rt-fca-ui-components/blob/master/src/components/Button/__tests__/Button.tsx">Unit test</a>
 						</li>
 					</ul>
+				</section>
+				<section>
+					<h5>What is Tailwindcss?</h5>
+					<p>Most CSS frameworks do too much.</p>
+					<blockquote style="font-size:24px;">
+						&ldquo;Tailwind is different. <br/>
+						Instead of opinionated predesigned components, Tailwind provides low-level utility classes that let you build completely custom designs without ever leaving your HTML.&rdquo;
+					</blockquote>
+					<p style="font-size: 16px;">
+						If you're sick of fighting the framework, overriding unwanted styles, and battling specificity wars, Tailwind was made for you.
+					</p>
+				</section>
+				<section>
+					<h5>What Tailwind is providing</h5>
+					<pre style="font-size:16px;"><code class="hljs">
+<!-- Using utilities: -->
+<button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+  Button
+</button>
+
+<!-- Using @apply in our scss: -->
+<scss>
+ .btn {
+   @apply font-bold py-2 px-4 rounded;
+ }
+ .btn-blue {
+   @apply bg-blue-500 text-white;
+ }
+ .btn-blue:hover {
+   @apply bg-blue-600;
+ }
+</scss>
+					</code></pre>
+				</section>
+				<section>
+					<h5>From Tailwind utilities to css</h5>
+					<img src="images/scsstocss.png" alt="" />
+					<p style="font-size: 16px;">
+						Tailwind utilities with @apply and theme() are converted into pure css
+					</p>
+				</section>
+				<section>
+					<h5>Style tokens</h5>
+					<p style="font-size: 22px;">Tailwind is written in PostCSS and configured in JavaScript, which means you have the full power of a real programming language at your fingertips.</p>
+					<pre style="font-size:16px;"><code class="hljs">// tailwind.config.js
+module.exports = {
+  theme: {
+    colors: {
+      primary: {
+        100: '#ebf8ff', // ==> bg-primary-100, text-primary-100
+        300: '#90cdf4',
+        ...
+      },
+      secondary: {
+        100: '#fffff0', // ==> bg-secondary-100, text-secondary-100
+        300: '#faf089',
+        ...
+      },
+	spacing: {
+		...
+		'10': '2.5rem',
+		...
+	  },
+    },
+  }
+}
+					</code></pre>
+					<a style="font-size:16px;" target="_blank" href="https://github.com/elsevierPTG/rt-fca-ui-components/blob/master/src/styles/tokens.js">FCA Tokens</a>
+				</section>
+				<section>
+					<h5>How to share the library</h5>
+					<p style="font-size:22px;">Share npm module from Artifactory</p>
+					<blockquote style="font-size:24px;">
+						&ldquo;Artifactory is where our npm modules lives. <br/>
+						Instead of using the public npm module registry, artifacory is accessible only from Elsevier developers.&rdquo;
+					</blockquote>
+					<p style="font-size:22px;">
+						When we are merging a PR to master, the jenkins pipeline will build and publish a new version.
+					</p>
+					<a style="font-size:16px;" href="https://rt.artifactory.tio.systems/artifactory">Elsevier artifactory</a>
+				</section>
+				<section>
+					<h5>What jenkins does</h5>
+					<p style="font-size:16px;">Here jenkins deploying a new version with the universe</p>
+					<img style="max-width: 45%" src="https://i.giphy.com/media/10kxE34bJPaUO4/giphy.webp" alt="">
 				</section>
 			</div>
 		</div>
