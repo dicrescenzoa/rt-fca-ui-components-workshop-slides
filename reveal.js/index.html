@@ -1,218 +1,256 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-background-image="/images/1.gif">
-					<img src="/images/els-logo.svg" style="background: white;" />
-					<h5 style="color: white;">Mastering the art of</h5>
-					<h1>KUNG-FUI</h1>
-					<h5 style="color: white;">React UI Components Workshop</h5>
-				</section>
-				<section>
-					<h3>AGENDA:</h3>
-					<div style="display: flex; text-align: left; margin: auto; width: 100%; align-items: stretch;">
-						<div style="font-size:16px; margin-right: 24px; width: 33.3%; border-right: 2px solid white; padding:6px;">
-							<p style="font-size:18px">Introduction (45min)</p>
-							<ul style="font-size: 16px;">
-								<li>Brand guidelines overview</li>
-								<li>Why a shared component library</li>
-								<li>Storybook</li>
-							</ul>
-						</div>
-						<div style="font-size:16px; margin-right: 24px; width: 33.3%; border-right: 2px solid white; padding:6px;">
-							<p style="font-size:18px">How can I add my own component into the library? (45min)</p>
-							<ul style="font-size: 16px;">
-								<li>How to create a ui component</li>
-								<li>Tailwind</li>
-								<li>Npm and Artifactory</li>
-								<li>Deploy a new version</li>
-								<li>Local testing</li>
-							</ul>
-						</div>
-						<div style="font-size:16px; margin-right: 24px; width: 33.3%;">
-							<p style="font-size:18px">Let's code (1.5hrs)</p>
-							<ul style="font-size: 16px;">
-								<li>Create react app</li>
-								<li>Setup Kung-Fui locally</li>
-								<li>Build a React App with existing components</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-				<section data-background-image="/images/2.gif">
-					<h3>Ready to start?</h3>
-				</section>
-				<section>
-					<h2>Chapter 1</h2>
-					<h5>Brand guidelines</h5>
-					<blockquote style="font-size:24px;">
-						&ldquo;The Elsevier brand guidelines will help you understand the systems and strategic rationale that underpins our brand.
-						It will help you manage your assets, products and communications in a consistent, coherent and expressive way – to support
-						our globally-recognizable brand.&rdquo;
-					</blockquote>
-					<a style="font-size:16px;" target="_blank" href="https://design.elsevier.com/digital-guidelines/index.html">Brand guidelines website</a>
-				</section>
-				<section>
-					<h5>How can we ensure our products are aligned with brand guidelines?</h5>
-				</section>
-				<section>
-					<h5>Case study: <span style="color:white; ">The FCA context</span></h5>
-					<ul style="font-size: 42px;">
-						<li>
-							Multiple products maintained by different teams
-						</li>
-						<li>
-							No comunication between teams
-						</li>
-						<li>
-							Duplication
-						</li>
-						<li>
-							No consistecy
-						</li>
-						<li>
-							Slowdowns
-						</li>
-						<li>
-							Impossible to share
-						</li>
-					</ul>
-				</section>
-				<section>
-					<img src="/images/backdays.jpg" width="30%" alt="" />
-				</section>
-				<section>
-					<h5>The solution</h5>
-					<p>
-						A good approach for avoiding such a situation is sharing a common UI-library that can be used as a reference.
-						It will help to reduce duplications and it will speed up the development of new products and features.
-					</p>
-				</section>
-				<section>
-					<h5>The main advantages of sharing a components library are:</h5>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-image="/images/1.gif">
+          <img src="/images/els-logo.svg" style="background: white;" />
+          <h5 style="color: white;">Mastering the art of</h5>
+          <h1>KUNG-FUI</h1>
+          <h5 style="color: white;">React UI Components Workshop</h5>
+        </section>
+        <section>
+          <h3>AGENDA:</h3>
+          <div
+            style="display: flex; text-align: left; margin: auto; width: 100%; align-items: stretch;"
+          >
+            <div
+              style="font-size:16px; margin-right: 24px; width: 33.3%; border-right: 2px solid white; padding:6px;"
+            >
+              <p style="font-size:18px">Introduction</p>
+              <ul style="font-size: 16px;">
+                <li>Brand guidelines overview</li>
+                <li>Why a shared component library</li>
+                <li>Storybook</li>
+              </ul>
+            </div>
+            <div
+              style="font-size:16px; margin-right: 24px; width: 33.3%; border-right: 2px solid white; padding:6px;"
+            >
+              <p style="font-size:18px">
+                How can I add my own component into the library?
+              </p>
+              <ul style="font-size: 16px;">
+                <li>How to create a ui component</li>
+                <li>Tailwind</li>
+                <li>Npm and Artifactory</li>
+                <li>Local testing</li>
+                <li>Deploy a new version</li>
+              </ul>
+            </div>
+            <div style="font-size:16px; margin-right: 24px; width: 33.3%;">
+              <p style="font-size:18px">Let's code</p>
+              <ul style="font-size: 16px;">
+                <li>Create react app</li>
+                <li>Setup Kung-Fui locally</li>
+                <li>Build a React App with existing components</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section data-background-image="/images/2.gif">
+          <h3>Ready to start?</h3>
+        </section>
+        <section>
+          <h2>Chapter 1</h2>
+          <h5>Brand guidelines</h5>
+          <blockquote style="font-size:24px;">
+            &ldquo;The Elsevier brand guidelines will help you understand the
+            systems and strategic rationale that underpins our brand. It will
+            help you manage your assets, products and communications in a
+            consistent, coherent and expressive way – to support our
+            globally-recognizable brand.&rdquo;
+          </blockquote>
+          <a
+            style="font-size:16px;"
+            target="_blank"
+            href="https://design.elsevier.com/digital-guidelines/index.html"
+            >Brand guidelines website</a
+          >
+        </section>
+        <section>
+          <h5>
+            How can we ensure our products are aligned with brand guidelines?
+          </h5>
+        </section>
+        <section>
+          <h5>
+            Case study: <span style="color:white; ">The FCA context</span>
+          </h5>
+          <ul style="font-size: 42px;">
+            <li>
+              Multiple products maintained by different teams
+            </li>
+            <li>
+              No comunication between teams
+            </li>
+            <li>
+              Duplication
+            </li>
+            <li>
+              No consistecy
+            </li>
+            <li>
+              Slowdowns
+            </li>
+            <li>
+              Impossible to share
+            </li>
+          </ul>
+        </section>
+        <section>
+          <img src="/images/backdays.jpg" width="30%" alt="" />
+        </section>
+        <section>
+          <h5>The solution</h5>
+          <p>
+            A good approach for avoiding such a situation is sharing a common
+            UI-library that can be used as a reference. It will help to reduce
+            duplications and it will speed up the development of new products
+            and features.
+          </p>
+        </section>
+        <section>
+          <h5>The main advantages of sharing a components library are:</h5>
 
-					<ul style="font-size: 42px;">
-						<li>
-							Improve consistency across products
-						</li>
-						<li>
-							Having developers able to build and maintain components across different products
-						</li>
-						<li>
-							Providing a reference for designers and developers
-						</li>
-						<li>
-							Avoiding duplications
-						</li>
-						<li>
-							Speed up development
-						</li>
-						<li>
-							Reducing complexity
-						</li>
-					</ul>
-				</section>
-				<section>
-					<h5>The Storybook</h5>
-					<blockquote style="font-size:24px;">
-						&ldquo;It is an open source tool for developing UI components in isolation.
-						It makes building stunning UIs organized and efficient.&rdquo;
-					</blockquote>
-					<a style="font-size:16px;" target="_blank" href="https://elsevierptg.github.io/rt-fca-ui-components/">FCA Storybook</a>
-				</section>
-				<section data-background-image="/images/3.gif">
-					<h2>let's start building it!</h2>
-				</section>
-				<section>
-					<h2>Chapter 2</h2>
-					<h5>How can I add my own component into the library?</h5>
-					<a style="font-size:16px;" target="_blank" href="https://github.com/elsevierPTG/rt-fca-ui-components">The github repo</a>
-				</section>
-				<section>
-					<h5>Anatomy of our library</h5>
-					<img src="/images/anatomy.jpg" alt="">
-				</section>
-				<section>
-					<h5>Ingredients for our delicious ui component</h5>
-					<ul style="font-size: 32px; list-style-type: none;">
-						<li>
-							<a style="font-size:16px;" target="_blank" href="https://github.com/elsevierPTG/rt-fca-ui-components/blob/master/src/components/Button/Button.tsx">React + Typescript</a>
-						</li>
-						<li>
-							<a style="font-size:16px;" target="_blank" href="https://github.com/elsevierPTG/rt-fca-ui-components/blob/master/src/components/Button/Button.scss">Styling with tailwind</a>
-						</li>
-						<li>
-							<a style="font-size:16px;" target="_blank" href="https://github.com/elsevierPTG/rt-fca-ui-components/blob/master/src/components/Button/__tests__/Button.tsx">Unit test</a>
-						</li>
-					</ul>
-				</section>
-				<section>
-					<h5>What is Tailwindcss?</h5>
-					<p>Most CSS frameworks do too much.</p>
-					<blockquote style="font-size:24px;">
-						&ldquo;Tailwind is different. <br/>
-						Instead of opinionated predesigned components, Tailwind provides low-level utility classes that let you build completely custom designs without ever leaving your HTML.&rdquo;
-					</blockquote>
-					<p style="font-size: 16px;">
-						If you're sick of fighting the framework, overriding unwanted styles, and battling specificity wars, Tailwind was made for you.
-					</p>
-				</section>
-				<section>
-					<h5>What Tailwind is providing</h5>
-					<pre style="font-size:16px;"><code class="hljs">
-<!-- Using utilities: -->
-<button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-  Button
-</button>
-
-<!-- Using @apply in our scss: -->
-<scss>
- .btn {
-   @apply font-bold py-2 px-4 rounded;
- }
- .btn-blue {
-   @apply bg-blue-500 text-white;
- }
- .btn-blue:hover {
-   @apply bg-blue-600;
- }
-</scss>
-					</code></pre>
-				</section>
-				<section>
-					<h5>From Tailwind utilities to css</h5>
-					<img src="images/scsstocss.png" alt="" />
-					<p style="font-size: 16px;">
-						Tailwind utilities with @apply and theme() are converted into pure css
-					</p>
-				</section>
-				<section>
-					<h5>Style tokens</h5>
-					<p style="font-size: 22px;">Tailwind is written in PostCSS and configured in JavaScript, which means you have the full power of a real programming language at your fingertips.</p>
-					<pre style="font-size:16px;"><code class="hljs">// tailwind.config.js
+          <ul style="font-size: 42px;">
+            <li>
+              Improve consistency across products
+            </li>
+            <li>
+              Having developers able to build and maintain components across
+              different products
+            </li>
+            <li>
+              Providing a reference for designers and developers
+            </li>
+            <li>
+              Avoiding duplications
+            </li>
+            <li>
+              Speed up development
+            </li>
+            <li>
+              Reducing complexity
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h5>The Storybook</h5>
+          <blockquote style="font-size:24px;">
+            &ldquo;It is an open source tool for developing UI components in
+            isolation. It makes building stunning UIs organized and
+            efficient.&rdquo;
+          </blockquote>
+          <a
+            style="font-size:16px;"
+            target="_blank"
+            href="https://elsevierptg.github.io/rt-fca-ui-components/"
+            >FCA Storybook</a
+          >
+        </section>
+        <section data-background-image="/images/3.gif">
+          <h2>let's start building it!</h2>
+        </section>
+        <section>
+          <h2>Chapter 2</h2>
+          <h5>How can I add my own component into the library?</h5>
+          <a
+            style="font-size:16px;"
+            target="_blank"
+            href="https://github.com/elsevierPTG/rt-fca-ui-components"
+            >The github repo</a
+          >
+        </section>
+        <section>
+          <h5>Ingredients for our delicious ui component</h5>
+          <ul style="font-size: 32px; list-style-type: none;">
+            <li>
+              <a
+                style="font-size:16px;"
+                target="_blank"
+                href="https://github.com/elsevierPTG/rt-fca-ui-components/blob/master/src/components/Button/Button.tsx"
+                >React + Typescript</a
+              >
+            </li>
+            <li>
+              <a
+                style="font-size:16px;"
+                target="_blank"
+                href="https://github.com/elsevierPTG/rt-fca-ui-components/blob/master/src/components/Button/Button.scss"
+                >Styling with tailwind</a
+              >
+            </li>
+            <li>
+              <a
+                style="font-size:16px;"
+                target="_blank"
+                href="https://github.com/elsevierPTG/rt-fca-ui-components/blob/master/src/components/Button/__tests__/Button.tsx"
+                >Unit test - Jest & enzyme</a
+              >
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h5>Anatomy of our library</h5>
+          <img src="/images/anatomy.jpg" alt="" />
+        </section>
+        <section>
+          <h5>Functional CSS</h5>
+          <blockquote style="font-size:24px;">
+            It is a practice of using small immutable and explicitly named
+            utility classes to construct components.
+          </blockquote>
+        </section>
+        <section>
+          <h5>Tailwindcss</h5>
+          <p>Most CSS frameworks do too much.</p>
+          <blockquote style="font-size:24px;">
+            &ldquo;Tailwind is different. <br />
+            Instead of opinionated predesigned components, Tailwind provides
+            low-level utility classes that let you build completely custom
+            designs without ever leaving your HTML.&rdquo;
+          </blockquote>
+          <p style="font-size: 16px;">
+            If you're sick of fighting the framework, overriding unwanted
+            styles, and battling specificity wars, Tailwind was made for you.
+          </p>
+        </section>
+        <section>
+          <h5>Style tokens</h5>
+          <p style="font-size: 22px;">
+            Tailwind is written in PostCSS and configured in JavaScript, which
+            means you have the full power of a real programming language at your
+            fingertips.
+          </p>
+          <pre style="font-size:16px;"><code class="hljs">// tailwind.config.js
 module.exports = {
   theme: {
     colors: {
@@ -235,60 +273,116 @@ module.exports = {
   }
 }
 					</code></pre>
-					<a style="font-size:16px;" target="_blank" href="https://github.com/elsevierPTG/rt-fca-ui-components/blob/master/src/styles/tokens.js">FCA Tokens</a>
+          <a
+            style="font-size:16px;"
+            target="_blank"
+            href="https://github.com/elsevierPTG/rt-fca-ui-components/blob/master/src/styles/tokens.js"
+            >FCA Tokens</a
+          >
+        </section>
+        <section>
+          <h5>What Tailwind is providing</h5>
+          <pre style="font-size:16px;"><code class="hljs">
+<!-- Using utilities: -->
+<button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+  Button
+</button>
 
-				</section>
-				<section>
-					<h5>How to share the library</h5>
-					<p style="font-size:22px;">Share npm module from Artifactory</p>
-					<blockquote style="font-size:24px;">
-						&ldquo;Artifactory is where our npm modules lives. <br/>
-						Instead of using the public npm module registry, artifacory is accessible only from Elsevier developers.&rdquo;
-					</blockquote>
-					<p style="font-size:22px;">
-						When we are merging a PR to master, the jenkins pipeline will build and publish a new version.
-					</p>
-					<a style="font-size:16px;" href="https://rt.artifactory.tio.systems/artifactory">Elsevier artifactory</a>
-				</section>
-				<section>
-					<h5>What jenkins does</h5>
-					<p style="font-size:16px;">Here jenkins deploying a new version with the universe</p>
-					<img style="max-width: 45%" src="https://i.giphy.com/media/10kxE34bJPaUO4/giphy.webp" alt="">
-				</section>
-				<section>
-					<h5>How to import the library locally in your project for test purpose</h5>
-					<p style="font-size:22px;">USE NPM LINK</p>
-					<blockquote style="font-size:24px;">
-						&ldquo;The npm documentation defines npm link as a 'means to symlink a package folder'.
-						Put simply, it's a means to connect your parent application to a module you have locally on your machine.
-						When you run the application, any changes you make to the dependency will be reflected in the application.&rdquo;
-					</blockquote>
-					<a style="font-size:16px;" target="_blank" href="https://docs.npmjs.com/cli/link.html">Npm link documentation</a>
-				</section>
-				<section data-background-image="/images/5.gif">
-					<h3>hands on time!</h3>
-					<p>what can ever go wrong?</p>
-					<p>¯\_(ツ)_/¯</p>
-				</section>
-			</div>
-		</div>
+<!-- Using @apply in our scss: -->
+<scss>
+ .btn {
+   @apply font-bold py-2 px-4 rounded;
+ }
+ .btn-blue {
+   @apply bg-blue-500 text-white;
+ }
+ .btn-blue:hover {
+   @apply bg-blue-600;
+ }
+</scss>
+					</code></pre>
+        </section>
+        <section>
+          <h5>From Tailwind utilities to css</h5>
+          <img src="images/scsstocss.png" alt="" />
+          <p style="font-size: 16px;">
+            Tailwind utilities with @apply and theme() are converted into pure
+            css
+          </p>
+        </section>
+        <section>
+          <h5>
+            How to test the component changes locally before publishing
+          </h5>
+          <p style="font-size:22px;">USE NPM LINK</p>
+          <blockquote style="font-size:24px;">
+            &ldquo;The npm documentation defines npm link as a 'means to symlink
+            a package folder'. Put simply, it's a means to connect your parent
+            application to a module you have locally on your machine. When you
+            run the application, any changes you make to the dependency will be
+            reflected in the application.&rdquo;
+          </blockquote>
+          <a
+            style="font-size:16px;"
+            target="_blank"
+            href="https://docs.npmjs.com/cli/link.html"
+            >Npm link documentation</a
+          >
+        </section>
+        <section>
+          <h5>How to share the library</h5>
+          <p style="font-size:22px;">Share npm module from Artifactory</p>
+          <blockquote style="font-size:24px;">
+            &ldquo;Artifactory is where our npm modules lives. <br />
+            Instead of using the public npm module registry, artifacory is
+            accessible only from Elsevier developers.&rdquo;
+          </blockquote>
+          <p style="font-size:22px;">
+            When a PR is merged to master with an updated version, the jenkins
+            pipeline will build and publish a new version to the Artifactory.
+          </p>
+          <a
+            style="font-size:16px;"
+            href="https://rt.artifactory.tio.systems/artifactory"
+            >Elsevier artifactory</a
+          >
+        </section>
+        <section>
+          <h5>What jenkins does</h5>
+          <p style="font-size:16px;">
+            Here jenkins deploying a new version with the universe
+          </p>
+          <img
+            style="max-width: 45%"
+            src="https://i.giphy.com/media/10kxE34bJPaUO4/giphy.webp"
+            alt=""
+          />
+        </section>
 
-		<script src="js/reveal.js"></script>
+        <section data-background-image="/images/5.gif">
+          <h3>hands on time!</h3>
+          <p>what can ever go wrong?</p>
+          <p>¯\_(ツ)_/¯</p>
+        </section>
+      </div>
+    </div>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				],
-				transition: 'fade'
-			});
-		</script>
-	</body>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        hash: true,
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/highlight/highlight.js" },
+          { src: "plugin/notes/notes.js", async: true }
+        ],
+        transition: "fade"
+      });
+    </script>
+  </body>
 </html>
